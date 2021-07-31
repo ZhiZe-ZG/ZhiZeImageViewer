@@ -4,7 +4,6 @@ import cv2 as cv
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, \
     QHBoxLayout, QWidget, QPushButton
-from numpy.lib.type_check import imag
 from Algorithms import RGB2BGR, RGB2GRAY
 
 
@@ -139,6 +138,7 @@ class MainWindow:
         image = np.transpose(image, (1, 2, 0))
         self.image_temp.set_image_data(image)
         self.update_image_label()
+
 
 # create app
 app = QApplication([])
