@@ -137,9 +137,7 @@ class MainWindow:
         image = RGB2GRAY(image)
         image = np.array([image, image, image])
         image = np.transpose(image, (1, 2, 0))
-        print(image.shape)
         self.image_temp.set_image_data(image)
-        print('data',self.image_temp.get_image_data().shape)
         self.update_image_label()
 
 # create app
